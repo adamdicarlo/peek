@@ -1,0 +1,24 @@
+{
+  "name": "peek",
+  "version": "0.0.1",
+  "description": "Retrieve nested object properties easily.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "deep",
+    "property",
+    "accessor",
+    "utility",
+    "dotpath"
+  ],
+  "author": {
+    "name": "Adam J. DiCarlo",
+    "email": "adam.dicarlo@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "~2.3.0"
+  }
+}
