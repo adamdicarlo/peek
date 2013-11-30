@@ -20,5 +20,16 @@
   "license": "MIT",
   "devDependencies": {
     "tape": "~2.3.0"
+  },
+  "testling": {
+    "files": "test.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/4..latest",
+      "chrome/29..latest",
+      "safari/5..latest",
+      "iphone/6..latest",
+      "ipad/6..latest"
+    ]
   }
 }
