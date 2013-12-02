@@ -42,8 +42,10 @@ key separators.
 ## Running the tests
 
 ```
-$ npm install peek
-$ npm test peek
+  $ git clone https://github.com/adamdicarlo/peek.git # clone or fork
+  $ cd peek
+  $ npm install
+  $ npm test
 ```
 
 ## License
