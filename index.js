@@ -5,7 +5,7 @@ module.exports = function(path) {
   var parts = path.split('.')
   return function(obj) {
     return parts.reduce(function(obj, segment) {
-      if(obj === null || typeof obj !== 'object') {
+      if (obj === null || obj === undefined) {
         return undefined
       }
       return obj[segment]

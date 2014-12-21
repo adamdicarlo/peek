@@ -41,10 +41,40 @@ test('Test example from README', function(assert) {
   assert.end()
 })
 
-test('Test exception cases', function(assert) {
+test('bad input cases', function(assert) {
   [{}, true, undefined, null, 5, Infinity].forEach(function(bad_type) {
     assert.throws(function() { peek(bad_type) }, TypeError)
   })
 
+  assert.end()
+})
+
+test('accessing properties of primitives', function(assert) {
+  var primitives = [
+      "grilled cheese sandwiches"
+    , true
+    , false
+    , 15
+    ]
+  var toString = peek('toString')
+
+  primitives.forEach(function testPrimitive(value) {
+    assert.doesNotThrow(function () { toString(value) })
+    assert.equal(toString(value).call(value), value.toString(), value + '.toString')
+  })
+  assert.end()
+})
+
+test('accessing properties of functions', function(assert) {
+  function f() {}
+  f.prototype.lettuce = 'optional'
+
+  var prototype = peek('prototype')
+  var lettuce = peek('prototype.lettuce')
+
+  assert.doesNotThrow(function () { prototype(f) })
+  assert.doesNotThrow(function () { lettuce(f) })
+  assert.strictEqual(prototype(f), f.prototype, 'prototype')
+  assert.strictEqual(lettuce(f), f.prototype.lettuce, 'prototype property')
   assert.end()
 })
