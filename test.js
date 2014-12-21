@@ -3,6 +3,7 @@ var peek = require('./index')
 
 test('basic fetches', function(assert) {
   assert.strictEqual(peek('a')({a: 5}), 5)
+  assert.strictEqual(peek('1')([3, 7]), 7)
   assert.strictEqual(peek('')({'': 6}), 6)
 
   assert.end()
