@@ -1,14 +1,14 @@
 var peek = require('./index')
   , test = require('tape')
 
-test('Test basic fetches', function(assert) {
+test('basic fetches', function(assert) {
   assert.strictEqual(peek('a')({a: 5}), 5)
   assert.strictEqual(peek('')({'': 6}), 6)
 
   assert.end()
 })
 
-test('Test advanced fetches', function(assert) {
+test('advanced fetches', function(assert) {
   var find = peek('part.key.attribute')
     , found = find({part: {key: {attribute: 'woop woop'}}})
   assert.strictEqual(found, 'woop woop')
@@ -25,7 +25,7 @@ test('Test advanced fetches', function(assert) {
   assert.end()
 })
 
-test('Test example from README', function(assert) {
+test('example from README', function(assert) {
   var booty = peek("lower deck.captain's quarters.secret panel.treasure")
   var pirate_ship = {
     'lower deck': {
