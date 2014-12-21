@@ -2,6 +2,8 @@
 
 Access deeply nested object properties using a path string.
 
+![build status](https://travis-ci.org/adamdicarlo/peek.svg?branch=master)
+
 ### Advantages over literal access
 
 * The expression `obj.foo.bar` will throw a TypeError if `obj.foo` is not an
