@@ -1,6 +1,6 @@
 {
   "name": "peek",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Retrieve nested object properties easily.",
   "main": "index.js",
   "scripts": {
