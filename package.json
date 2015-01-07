@@ -26,6 +26,7 @@
     "url": "https://github.com/adamdicarlo/peek/issues"
   },
   "devDependencies": {
+    "amd-wrap": "^1.1.0",
     "tape": "~2.3.0"
   },
   "testling": {
